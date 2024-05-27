@@ -1,0 +1,13 @@
+.categoryContainer {
+    max-width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 10px;
+
+    
+}

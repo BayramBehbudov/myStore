@@ -1,0 +1,29 @@
+.nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    display: block;
+    color: rgb(9, 100, 203);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+}

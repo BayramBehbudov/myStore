@@ -1,0 +1,146 @@
+.reviewContainer {
+    position: absolute;
+
+    width: 100%;
+    height: fit-content;
+
+    top: 140%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .inputs {
+        background-color: rgb(200, 232, 222);
+        width: 80%;
+        height: fit-content;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+
+        .inputSection {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 70%;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .commentInput {
+            width: 80%;
+        }
+
+        button {
+            padding: 10px;
+            width: 100px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: rgb(122, 122, 223);
+            transition: all 0.5s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .rate {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background-color: white;
+            width: 200px;
+            padding: 1px 10px;
+            border-radius: 20px;
+            border: none;
+
+            p {
+                font-size: 20px;
+            }
+
+            .stars {
+                display: flex;
+                gap: 5px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+
+                    cursor: pointer;
+
+                }
+
+                img:hover {
+                    transform: scale(1.1);
+                    transition: all 0.5s;
+
+                }
+            }
+        }
+
+
+    }
+
+    .reviews {
+        width: 80%;
+        height: fit-content;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        .reviewItem {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+            .reviewSection {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 5px;
+                padding: 10px;
+                border-bottom: 1px solid rgb(9, 9, 9);
+            }
+
+            .comment {
+                padding: 10px;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+
+            .reviewerName {
+                font-size: 18px;
+                font-weight: bold;
+                display: flex;
+                gap: 0;
+            }
+
+            background-color: aliceblue;
+        }
+
+        background-color: rgb(200, 232, 222);
+    }
+
+}
+
