@@ -153,65 +153,6 @@
             width: 50%;
         }
 
-        .faqContainer {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 5px;
-            font-family: "Chakra Petch", sans-serif;
-        }
-
-        .faqContainer h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .faq {
-            margin-top: 10px;
-        }
-
-        .faqQuestion {
-            cursor: pointer;
-            padding: 10px;
-            background: #f1f1f1;
-            border: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .faqQuestion:hover {
-            background: #e1e1e1;
-        }
-
-        .faqAnswer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 10px;
-            border: 1px solid #ccc;
-            background-color: rgb(246, 198, 77);
-
-            border-top: none;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-
-        .faqAnswer.open {
-            max-height: 200px;
-            padding: 10px;
-        }
-
-        .faqToggle {
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .faqToggle.open {
-            transform: rotate(90deg);
-        }
-
-
-
-
 
         .footerLeft {
             display: flex;
@@ -219,25 +160,8 @@
             align-items: center;
             align-items: center;
 
-            h2{width: 40%;}
         }
 
-        .subscribeInput {
-            width: 80%;
-            margin-bottom: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .subscribeButton {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     }
 
 }

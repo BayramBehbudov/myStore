@@ -1,0 +1,105 @@
+.contactContainer {
+  width: 100%;
+  height: fit-content;
+  min-height: 100px;
+
+  padding: 20px 0;
+
+  font-family: "Chakra Petch", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+
+  gap: 40px;
+}
+
+
+.contactSection {
+  width: 99%;
+  height: fit-content;
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+
+.contactInfo,
+.contactForm {
+  padding: 40px;
+  border-radius: 10px;
+
+  height: fit-content;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo {
+  width: 30%;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.contactForm {
+  width: 40%
+}
+
+
+.contactInfo h2,
+.contactForm h2 {
+  color: #0f03ee;
+  width: 100%;
+  text-align: center;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.contactInfo p {
+  margin: 10px 0;
+}
+
+.contactInput,
+.contactTextarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.contactButton {
+  width: 104%;
+
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.contactButton:hover {
+  background-color: #175fd3;
+}
+
+.contactButton:active {
+  transform: none;
+}

@@ -1,0 +1,39 @@
+h2 {
+    width: 40%;
+}
+.subCont {
+    width: 80%;
+    position: relative;
+    height: fit-content;
+
+}
+
+.subscribeInput {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.subscribeButton {
+    padding: 10px 20px;
+    background-color: #d28c1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 20%;
+    right: -5%;
+
+    transition: all 0.3s;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+button:hover {
+    background-color: #4CAF50;
+
+}

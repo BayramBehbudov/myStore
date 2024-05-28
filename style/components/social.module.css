@@ -1,0 +1,40 @@
+.socialIcons {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+
+    a:hover {
+        transform: scale(1.1);
+    }
+
+    a {
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    a:active {
+        transform: scale(0.9);
+    }
+
+
+    .facebook {
+        color: rgb(14, 21, 216);
+    }
+
+    .twitter {
+        color: black;
+    }
+
+    .instagram {
+        color: rgb(100, 7, 186);
+    }
+
+    .linkedin {
+        color: rgb(12, 141, 233);
+    }
+
+    .whatsapp {
+        color: green;
+    }
+}
