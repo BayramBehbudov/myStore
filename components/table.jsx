@@ -5,12 +5,18 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function table() {
   const { shopCardItems } = ShopCardData();
+
   function calculateTotal() {
     let sum = 0;
     shopCardItems.map((product) => {
-      sum += product.price * product.count;
+      const { price, count, discountPercentage } = product;
+
+      sum +=
+        (discountPercentage
+          ? parseFloat(price - (price * discountPercentage) / 100).toFixed(2)
+          : price) * count;
     });
-    return sum;
+    return parseFloat(sum).toFixed(2);
   }
 
   return (
@@ -25,7 +31,12 @@ function table() {
       </thead>
       <tbody>
         {shopCardItems.map((product, index) => {
-          const { images, price, title, count } = product;
+          const { image, price, title, count, discountPercentage } = product;
+
+          const newPrice = discountPercentage
+            ? parseFloat(price - (price * discountPercentage) / 100).toFixed(2)
+            : null;
+
           return (
             <tr key={index}>
               <th onClick={() => shopCardItems.splice(index, 1)}>
@@ -35,10 +46,19 @@ function table() {
                 />
               </th>
               <th>
-                <img src={images[0]} alt="" />
+                <img src={image} alt="" />
               </th>
               <th>{title}</th>
-              <th>${price}</th>
+              <th>
+                {discountPercentage != undefined ? (
+                  <div>
+                    <s>${price}</s>
+                    <p>{newPrice}</p>
+                  </div>
+                ) : (
+                  price
+                )}
+              </th>
               <th>
                 <div className={style.counter}>
                   <button
@@ -60,7 +80,7 @@ function table() {
                   </button>
                 </div>
               </th>
-              <th className="totals">${count * price}</th>
+              <th>${count * (discountPercentage ? newPrice : price)}</th>
             </tr>
           );
         })}

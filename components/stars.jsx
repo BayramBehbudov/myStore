@@ -1,4 +1,5 @@
 import style from "../style/components/stars.module.css";
+
 function stars({ stars }) {
   let arr = [];
 

@@ -43,10 +43,10 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#New & Featured"
-                onClick={() => setPageName("newFeature")}
+                href="#DiscountPage"
+                onClick={() => setPageName("discountPage")}
               >
-                New & Featured
+               Discount Here
               </a>
             </li>
             <li>

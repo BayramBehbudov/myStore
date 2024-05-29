@@ -8,7 +8,7 @@ const ProductItem = ({ product }) => {
     return (
       <div className={style.card}>
         <div className={style.cardimg}>
-          <img src={product.images[0]} alt="" />
+          <img src={product.image} alt="" />
         </div>
         <div className={style.cardinfo}>
           <p className={style.texttitle}>{product.title}</p>
@@ -30,7 +30,7 @@ const ProductItem = ({ product }) => {
     return (
       <div className={style.card}>
         <div className={style.cardimg}>
-          <img src={product.images[0]} alt="" />
+          <img src={product.image} alt="" />
         </div>
         <div className={style.cardinfo}>
           <p className={style.texttitle}>{product.title}</p>

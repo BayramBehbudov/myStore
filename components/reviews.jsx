@@ -2,7 +2,6 @@ import style from "../style/components/review.module.css";
 import Stars from "./stars";
 
 function reviews({ reviews }) {
-
   // function inputValue(className) {
   //   let value = document.querySelector(`.${className}`);
   //   return value;
@@ -54,11 +53,13 @@ function reviews({ reviews }) {
       </div>
 
       <div className={style.reviews}>
-        {reviews.map((review, index) => {
+        {reviews?.map((review, index) => {
           return (
             <div key={index} className={style.reviewItem}>
               <div className={style.reviewSection}>
-                <p className={style.reviewerName}>{review.reviewerName}</p>
+                <p className={style.reviewerName}>
+                  {review.reviewerName ? review.reviewerName : "Anonim"}
+                </p>
                 <Stars stars={review.rating} />
                 <p>{review.date.slice(0, 10)}</p>
               </div>

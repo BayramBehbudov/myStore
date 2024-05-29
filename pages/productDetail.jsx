@@ -11,7 +11,7 @@ function productDetail() {
 
   const {
     title,
-    images,
+    image,
     brand,
     discountPercentage,
     price,
@@ -26,9 +26,10 @@ function productDetail() {
   function addToCard() {
     const product = {
       title,
-      images,
+      image,
       price,
       count,
+      discountPercentage,
     };
 
     if (shopCardItems.length != 0) {
@@ -51,39 +52,50 @@ function productDetail() {
   return (
     <div className={style.prodContainer}>
       <div className={style.leftSect}>
-        <img src={images[0]} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className={style.rightSect}>
         <div className={style.rightCont}>
-          <div>
-            <p>Brand:</p>
-            <span>{brand}</span>
-          </div>
-          <div>
-            {" "}
-            <p>Discount:</p>
-            <span>{discountPercentage}%</span>
-          </div>
+          {brand && (
+            <div>
+              <p>Brand:</p>
+              <span>{brand}</span>
+            </div>
+          )}
+
+          {discountPercentage && (
+            <div>
+              {" "}
+              <p>Discount:</p>
+              <span>{discountPercentage}%</span>
+            </div>
+          )}
+
           <div>
             <p>Price:</p>
             <span>{price}$</span>
           </div>
-          <div>
-            <p>Return Policy:</p>
-            <span>{returnPolicy}</span>
-          </div>
 
-          <div>
-            <p>Warranty:</p>
-            <span>{warrantyInformation}</span>
-          </div>
+          {returnPolicy && (
+            <div>
+              <p>Return Policy:</p>
+              <span>{returnPolicy}</span>
+            </div>
+          )}
+
+          {warrantyInformation && (
+            <div>
+              <p>Warranty:</p>
+              <span>{warrantyInformation}</span>
+            </div>
+          )}
+
           <div>
             <p>{description}</p>
           </div>
-
           <div className={style.detailContFooter}>
             <div className={style.detailContLeftFooter}>
-              {tags.map((tag) => {
+              {tags?.map((tag) => {
                 return <i key={tag}>#{tag}</i>;
               })}
             </div>

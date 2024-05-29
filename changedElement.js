@@ -7,8 +7,10 @@ const useChangedElement = create(set => ({
     allReviews: [],
     shopCardItems: [],
 
-
     setReview: review => set(state => ({ allReviews: (state.allReviews = review) })),
+
+    setshopCardItems: item => set(state => ({ shopCardItems: (state.shopCardItems = item) })),
+
 
     setProduct: product => set(state => ({ selectedProduct: (state.selectedProduct = product) })),
 

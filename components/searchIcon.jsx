@@ -1,21 +1,13 @@
 import React, { useState } from "react";
 import style from "../style/components/searchIcon.module.css";
 import useChangeElement from "../changedElement.js";
-
-const getData = async () => {
-  const res = await fetch("https://dummyjson.com/products");
-  const data = await res.json();
-  return data;
-};
-
-const productsData = (await getData()).products;
+import { AllProductsData } from "../allProducts.jsx";
 
 function searchIcon() {
   const [inputValue, setInputValue] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { setPageName, setProduct } = useChangeElement();
-
   const handleChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
@@ -24,15 +16,15 @@ function searchIcon() {
   };
 
   const filterProducts = (value) => {
-    const filtered = productsData.filter((product) =>
+    const filtered = AllProductsData.filter((product) =>
       product.title.toLowerCase().includes(value.toLowerCase())
     );
     setFilteredProducts(filtered);
   };
 
-  const handleProductClick = (productId) => {
+  const handleProductClick = (sku) => {
     setPageName("detailPage"),
-      setProduct(productsData.filter((prod) => prod.id == productId)[0]);
+      setProduct(AllProductsData.filter((prod) => prod.sku == sku)[0]);
   };
 
   const toggleModal = () => {
@@ -58,8 +50,8 @@ function searchIcon() {
           <ul>
             {filteredProducts.map((product) => (
               <li
-                key={product.id}
-                onClick={() => handleProductClick(product.id)}
+                key={product.sku}
+                onClick={() => handleProductClick(product.sku)}
               >
                 {product.title}
               </li>

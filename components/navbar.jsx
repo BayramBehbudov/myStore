@@ -2,43 +2,54 @@ import style from "../style/components/navbar.module.css";
 import changePage from "../changedElement.js";
 
 function navbar() {
-  const { setPageName } = changePage();
+  const { setPageName, pageName, setCategory } = changePage();
 
   return (
     <nav className={style.nav}>
       <ul className={style.navbar}>
         <li>
-          <a href="#home" className="home" onClick={() => setPageName("home")}>
+          <a
+            href="#home"
+            className={pageName == "home" ? style.activePage : ""}
+            onClick={() => setPageName("home")}
+          >
             Home
           </a>
         </li>
         <li>
           <a
-            href="#New & Featured"
-            className="new-Featured"
-            onClick={() => setPageName("newFeature")}
+            href="#DiscountPage"
+            onClick={() => {
+              setCategory("All");
+              setPageName("discountPage");
+            }}
+            className={pageName == "discountPage" ? style.activePage : ""}
           >
-            New & Featured
+            Discount Here
           </a>
         </li>
         <li>
           <a
             href="#Category"
-            className="category"
+            className={pageName == "category" ? style.activePage : ""}
             onClick={() => setPageName("category")}
           >
             Category
           </a>
         </li>
         <li>
-          <a href="#About" className="about" onClick={() => setPageName("about")}>
+          <a
+            href="#About"
+            className={pageName == "about" ? style.activePage : ""}
+            onClick={() => setPageName("about")}
+          >
             About
           </a>
         </li>
         <li>
           <a
             href="#Contact"
-            className="contact"
+            className={pageName == "contact" ? style.activePage : ""}
             onClick={() => setPageName("contact")}
           >
             Contact

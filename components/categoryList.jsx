@@ -1,27 +1,37 @@
 import style from "../style/components/categorylist.module.css";
-import selectedCategory from "../changedElement.js";
+import useSelectedCategory from "../changedElement.js";
+import { AllProductsData } from "../allProducts.jsx";
+
+const allCategory = [];
+
+AllProductsData.forEach((data) => {
+  if (!allCategory.includes(data.category)) {
+    allCategory.push(data.category);
+  }
+});
 
 function category() {
-  const { setCategory } = selectedCategory();
+  const { setCategory, selectedCategory } = useSelectedCategory();
   return (
     <div className={style.categoryListCont}>
       <button
-        className={style.leftCategoryList}
+        className={`${style.leftCategoryList} ${
+          selectedCategory == "All" ? style.activeBtn : ""
+        }`}
         onClick={() => setCategory("All")}
       >
         All Products
       </button>
       <div className={style.rightCategoryList}>
-        <button onClick={() => setCategory("beauty")}>Beauty</button>
-        <button onClick={() => setCategory("fragrances")}>Fragrances</button>
-        <button onClick={() => setCategory("furniture")}>Furniture</button>
-        <button onClick={() => setCategory("groceries")}>Groceries</button>
-        <button onClick={() => setCategory("All")}>Category 5</button>
-        <button onClick={() => setCategory("All")}>Category 6</button>
-        <button onClick={() => setCategory("All")}>Category 7</button>
-        <button onClick={() => setCategory("All")}>Category 8</button>
-        <button onClick={() => setCategory("All")}>Category 9</button>
-        <button onClick={() => setCategory("All")}>Category 10</button>
+        {allCategory.map((category) => (
+          <button
+            key={category}
+            className={selectedCategory == category ? style.activeBtn : ""}
+            onClick={() => setCategory(category)}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
       </div>
     </div>
   );

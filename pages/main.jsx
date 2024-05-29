@@ -1,7 +1,7 @@
 import Categorie from "./category";
 import About from "./about";
 import Contact from "./contact";
-import NewFeature from "./newFeature";
+import DiscountPage from "./discountPage.jsx";
 import Home from "./home";
 import ProductDetail from "./productDetail.jsx";
 import ShopCardPage from "./shopCardPage.jsx";
@@ -15,7 +15,7 @@ const pages = {
   about: <About />,
   contact: <Contact />,
   home: <Home />,
-  newFeature: <NewFeature />,
+  discountPage: <DiscountPage />,
   detailPage: <ProductDetail />,
   shopCardPage: <ShopCardPage/>
 };
