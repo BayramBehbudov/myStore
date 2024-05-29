@@ -1,0 +1,54 @@
+.searchIconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .searchInput {
+        border: none;
+        border-radius: 10px;
+        width: 200px;
+        padding: 8px;
+    }
+
+    .searchIcon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .modal {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+
+        max-height: 200px;
+        overflow: auto;
+    }
+
+    .modal ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .modal ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .modal ul li:last-child {
+        border-bottom: none;
+    }
+}

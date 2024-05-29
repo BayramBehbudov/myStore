@@ -5,45 +5,85 @@ import ReviewsPage from "../components/reviews.jsx";
 import React, { useState } from "react";
 
 function productDetail() {
-  const { selectedProduct } = setSelectedElement();
+  const { selectedProduct, shopCardItems } = setSelectedElement();
+
   const [count, setCount] = useState(1);
-  let reviewsData = selectedProduct.reviews;
+
+  const {
+    title,
+    images,
+    brand,
+    discountPercentage,
+    price,
+    returnPolicy,
+    warrantyInformation,
+    description,
+    tags,
+    reviews,
+    rating,
+  } = selectedProduct;
+
+  function addToCard() {
+    const product = {
+      title,
+      images,
+      price,
+      count,
+    };
+
+    if (shopCardItems.length != 0) {
+      if (
+        shopCardItems.some((item) => {
+          return item.title === product.title;
+        })
+      ) {
+        shopCardItems.forEach((prod) => {
+          prod.title === product.title ? (prod.count = product.count) : "";
+        });
+      } else {
+        shopCardItems.push(product);
+      }
+    } else {
+      shopCardItems.push(product);
+    }
+  }
+
   return (
     <div className={style.prodContainer}>
       <div className={style.leftSect}>
-        <img src={selectedProduct.images[0]} alt="" />
+        <img src={images[0]} alt="" />
       </div>
       <div className={style.rightSect}>
         <div className={style.rightCont}>
           <div>
             <p>Brand:</p>
-            <span>{selectedProduct.brand}</span>
+            <span>{brand}</span>
           </div>
           <div>
             {" "}
             <p>Discount:</p>
-            <span>{selectedProduct.discountPercentage}%</span>
+            <span>{discountPercentage}%</span>
           </div>
           <div>
             <p>Price:</p>
-            <span>{selectedProduct.price}$</span>
+            <span>{price}$</span>
           </div>
           <div>
             <p>Return Policy:</p>
-            <span>{selectedProduct.returnPolicy}</span>
+            <span>{returnPolicy}</span>
           </div>
 
           <div>
             <p>Warranty:</p>
-            <span>{selectedProduct.warrantyInformation}</span>
+            <span>{warrantyInformation}</span>
           </div>
           <div>
-            <p>{selectedProduct.description}</p>
+            <p>{description}</p>
           </div>
 
           <div className={style.detailContFooter}>
             <div className={style.detailContLeftFooter}>
-              {selectedProduct.tags.map((tag) => {
+              {tags.map((tag) => {
                 return <i key={tag}>#{tag}</i>;
               })}
             </div>
@@ -63,7 +103,14 @@ function productDetail() {
                 </button>
               </div>
               <div>
-                <button className={style.addCardBtn}>Add to card</button>
+                <button
+                  onClick={() => {
+                    addToCard();
+                  }}
+                  className={style.addCardBtn}
+                >
+                  Add to card
+                </button>
               </div>
             </div>
           </div>
@@ -71,17 +118,17 @@ function productDetail() {
       </div>
 
       <div className={style.prodName}>
-        <p>{selectedProduct.title}</p>
+        <p>{title}</p>
       </div>
 
       <div className={style.starRaitings}>
         <div>
-          <Stars stars={selectedProduct.rating} />
+          <Stars stars={rating} />
         </div>
-        <p>Raitings: {selectedProduct.rating}</p>
+        <p>Raitings: {rating}</p>
       </div>
 
-      <ReviewsPage reviews={reviewsData} />
+      <ReviewsPage reviews={reviews} />
     </div>
   );
 }

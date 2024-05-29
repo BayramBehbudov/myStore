@@ -1,0 +1,55 @@
+.shopCardIconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .shopCardIcon {
+        cursor: pointer;
+        font-size: 27px;
+        transition: all 0.3s;
+        color: rgb(91, 82, 73);
+    }
+    .shopCardIcon:hover {
+        transform: scale(1.1);
+    }
+    .shopCardIconCount {
+        position: absolute;
+        left: 37px;
+        top: -13px;
+        font-weight: bold;
+        color: rgb(8, 8, 8);
+    }
+}
+
+.shopCardPageContainer {
+    width: 100%;
+    min-height: 500px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrowLeftIcon {
+        font-size: 20px;
+    }
+
+    .backShopBtn {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .shopCardFooter {
+        width: 90%;
+    }
+}

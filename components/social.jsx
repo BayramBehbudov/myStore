@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+
 import style from "../style/components/social.module.css";
 function social() {
   return (

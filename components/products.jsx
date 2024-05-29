@@ -10,11 +10,11 @@ const getData = async () => {
 const productsData = (await getData()).products;
 
 function products() {
-  
+
   return (
     <div className={style.productsContainer}>
       {productsData.map((item) => (
-        <ProductCard  key={item.sku} product={item} />
+        <ProductCard key={item.sku} product={item} />
       ))}
     </div>
   );

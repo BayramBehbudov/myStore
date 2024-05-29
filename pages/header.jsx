@@ -1,6 +1,8 @@
 import React from "react";
 import style from "../style/pages/header.module.css";
 import Navbar from "../components/navbar";
+import ShopCardIcon from "../components/shopcardIcon.jsx";
+import SearchIconIcon from "../components/searchIcon.jsx";
 
 function header() {
   return (
@@ -12,12 +14,10 @@ function header() {
         <Navbar />
       </div>
       <div className={style.icons}>
-        <div>
-          <img src="../img/searchicon.svg" alt="" />
-          <img src="../img/usericon.svg" alt="" />
-          <img src="../img/heart.svg" alt="" />
-          <img src="../img/shopcard.svg" alt="" />
-        </div>
+        <SearchIconIcon />
+        <img src="../img/usericon.svg" alt="" />
+        <img src="../img/heart.svg" alt="" />
+        <ShopCardIcon />
       </div>
     </div>
   );
