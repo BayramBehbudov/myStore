@@ -5,8 +5,12 @@
 
     gap: 5px;
 
-    img {
+    .starItem {
         width: 25px;
         height: 25px;
     }
+}
+
+.active {
+    color: rgb(243, 130, 50);
 }

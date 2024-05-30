@@ -1,5 +1,5 @@
 import style from "../style/components/review.module.css";
-import Stars from "./stars";
+import Stars from "./star.jsx";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,6 @@ function reviews({ reviews }) {
   const [reviewerEmail, setEmailInputValue] = useState("");
   const [comment, setCommentInputValue] = useState("");
   const [rating, setRate] = useState();
-
 
   function reviewSetBtn() {
     const date = new Date().toISOString();

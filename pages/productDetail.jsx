@@ -1,9 +1,8 @@
 import setSelectedElement from "../changedElement.js";
 import style from "../style/components/productDetails.module.css";
-import Stars from "../components/stars.jsx";
 import ReviewsPage from "../components/reviews.jsx";
 import React, { useState } from "react";
-
+import Stars from "../components/star.jsx";
 function productDetail() {
   const { selectedProduct, shopCardItems } = setSelectedElement();
 
