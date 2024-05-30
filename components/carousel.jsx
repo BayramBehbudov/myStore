@@ -11,28 +11,24 @@ import { useState } from "react";
 const carouselData = [
   {
     img: "https://t3.ftcdn.net/jpg/03/26/76/86/240_F_326768634_DG1g2i6zbe9D1HQAIoIRPxv8kqDKSpyV.jpg",
-    title: "beauty",
-    desc: "beaty desc",
-    btn: "Beaty",
+    title: "Slide 1",
+    desc: "lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo molestiae eaque, rerum modi quam fugit vel",
   },
   {
     img: "https://t4.ftcdn.net/jpg/04/20/61/29/240_F_420612964_65MvCNPGW52GEPNMbycspxsX6ZEXW56S.jpg",
-    title: "fragrances",
-    desc: "Fragrances desc",
-    btn: "Fragrances",
+    title: "Slide 2",
+    desc: "lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo molestiae eaque, rerum modi quam fugit vel",
   },
   {
     img: "https://t3.ftcdn.net/jpg/03/33/01/28/240_F_333012811_8woB62pzBYSdjsloH9cbD8rkpGgIhbpg.jpg",
-    title: "jewelery",
-    desc: "jewelry desc",
-    btn: "jewelry",
+    title: "Slide 3",
+    desc: "lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo molestiae eaque, rerum modi quam fugit vel",
   },
-//   {
-//     img: "https://t3.ftcdn.net/jpg/03/33/01/28/240_F_333012811_8woB62pzBYSdjsloH9cbD8rkpGgIhbpg.jpg",
-//     title: "jewelry",
-//     desc: "jewelry desc",
-//     btn: "jewelry",
-//   },
+  {
+    img: "https://t4.ftcdn.net/jpg/04/20/61/29/240_F_420612964_65MvCNPGW52GEPNMbycspxsX6ZEXW56S.jpg",
+    title: "Slide 4",
+    desc: "lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo molestiae eaque, rerum modi quam fugit vel",
+  },
 ];
 
 function carousel() {

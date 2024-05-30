@@ -40,6 +40,9 @@
 
         .commentInput {
             width: 80%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
         }
 
         button {
@@ -74,18 +77,20 @@
                 display: flex;
                 gap: 5px;
 
-                img {
-                    width: 20px;
-                    height: 20px;
-
+                .star {
+                    width: 25px;
+                    height: 25px;
                     cursor: pointer;
-
                 }
 
-                img:hover {
+                .star:hover {
                     transform: scale(1.1);
                     transition: all 0.5s;
+                }
 
+                .active {
+
+                    color: rgb(236, 101, 4);
                 }
             }
         }
@@ -143,4 +148,3 @@
     }
 
 }
-

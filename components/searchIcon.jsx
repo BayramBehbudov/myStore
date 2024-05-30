@@ -8,6 +8,7 @@ function searchIcon() {
   const [showModal, setShowModal] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { setPageName, setProduct } = useChangeElement();
+
   const handleChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
@@ -23,8 +24,11 @@ function searchIcon() {
   };
 
   const handleProductClick = (sku) => {
-    setPageName("detailPage"),
-      setProduct(AllProductsData.filter((prod) => prod.sku == sku)[0]);
+
+    setProduct(AllProductsData.filter((prod) => prod.sku == sku)[0])
+    setInputValue("")
+    setFilteredProducts([])
+    setPageName("detailPage")
   };
 
   const toggleModal = () => {

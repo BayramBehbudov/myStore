@@ -24,6 +24,7 @@ function productDetail() {
   } = selectedProduct;
 
   function addToCard() {
+    setCount("1");
     const product = {
       title,
       image,

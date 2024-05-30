@@ -2,7 +2,7 @@ import style from "../style/components/shopCardTable.module.css";
 import ShopCardData from "../changedElement.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-
+import Button from "../components/btnWithStars.jsx";
 function table() {
   const { shopCardItems } = ShopCardData();
 
@@ -19,7 +19,7 @@ function table() {
     return parseFloat(sum).toFixed(2);
   }
 
-  return (
+  return shopCardItems.length != 0 ? (
     <table className={style.shopCardTable} border="1">
       <thead>
         <tr>
@@ -92,6 +92,11 @@ function table() {
         </tr>
       </tfoot>
     </table>
+  ) : (
+    <div className={style.emptyTextContainer}>
+      <h1>Your Card Empty</h1>
+      <Button />
+    </div>
   );
 }
 

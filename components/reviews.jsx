@@ -1,51 +1,111 @@
 import style from "../style/components/review.module.css";
 import Stars from "./stars";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+let data;
 
 function reviews({ reviews }) {
-  // function inputValue(className) {
-  //   let value = document.querySelector(`.${className}`);
-  //   return value;
-  // }
+  const [reviewerName, setNameInputValue] = useState("");
+  const [reviewerEmail, setEmailInputValue] = useState("");
+  const [comment, setCommentInputValue] = useState("");
+  const [rating, setRate] = useState();
 
-  // function reviewSetBtn() {
-  //   const reviewerName = inputValue("reviewerName");
-  //   const comment = inputValue("commentInput");
-  //   const formattedDate = new Date().toISOString().slice(0, 10);
-  //   const data = {
-  //     reviewerName,
-  //     comment,
-  //     formattedDate,
-  //     rating: 5,
-  //   };
-  // }
 
+  function reviewSetBtn() {
+    const date = new Date().toISOString();
+    const data = {
+      reviewerName,
+      reviewerEmail,
+      comment,
+      date,
+      rating,
+    };
+
+    reviews.push(data);
+
+    setNameInputValue("");
+    setEmailInputValue("");
+    setCommentInputValue("");
+    setRate("0");
+  }
   return (
     <div className={style.reviewContainer}>
       <div className={style.inputs}>
         <div className={style.inputSection}>
-          <input type="text" placeholder="Full Name" className="reviewerName" />
-          <input type="email" placeholder="Email" />
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={reviewerName}
+            className="reviewerName"
+            onChange={(e) => {
+              setNameInputValue(e.target.value);
+            }}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={reviewerEmail}
+            onChange={(e) => {
+              setEmailInputValue(e.target.value);
+            }}
+          />
           <div className={style.rate}>
             <p>Rate: </p>
             <div className={style.stars}>
-              <img src="../img/starwhite.png" alt="" rate="1" />
-              <img src="../img/starwhite.png" alt="" rate="2" />
-              <img src="../img/starwhite.png" alt="" rate="3" />
-              <img src="../img/starwhite.png" alt="" rate="4" />
-              <img src="../img/starwhite.png" alt="" rate="5" />
+              <FontAwesomeIcon
+                className={`${style.star} ${rating >= 1 && style.active}`}
+                icon={faStar}
+                onClick={() => {
+                  setRate("1");
+                }}
+              />
+              <FontAwesomeIcon
+                className={`${style.star} ${rating >= 2 && style.active}`}
+                icon={faStar}
+                onClick={() => {
+                  setRate("2");
+                }}
+              />
+              <FontAwesomeIcon
+                className={`${style.star} ${rating >= 3 && style.active}`}
+                icon={faStar}
+                onClick={() => {
+                  setRate("3");
+                }}
+              />
+              <FontAwesomeIcon
+                className={`${style.star} ${rating >= 4 && style.active}`}
+                icon={faStar}
+                onClick={() => {
+                  setRate("4");
+                }}
+              />
+              <FontAwesomeIcon
+                className={`${style.star} ${rating >= 5 && style.active}`}
+                icon={faStar}
+                onClick={() => {
+                  setRate("5");
+                }}
+              />
             </div>
           </div>
         </div>
         <div className={style.inputSection}>
-          <input
+          <textarea
             type="text"
+            rows={4}
+            value={comment}
             placeholder="Comment"
             className={style.commentInput}
+            onChange={(e) => {
+              setCommentInputValue(e.target.value);
+            }}
           />
         </div>
         <button
-          onClick={() => {
-            reviewSetBtn();
+          onClick={(e) => {
+            reviewSetBtn(e.target.value);
           }}
         >
           Comment
