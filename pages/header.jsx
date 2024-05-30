@@ -3,6 +3,10 @@ import style from "../style/pages/header.module.css";
 import Navbar from "../components/navbar";
 import ShopCardIcon from "../components/shopcardIcon.jsx";
 import SearchIconIcon from "../components/searchIcon.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+
+
 
 function header() {
   return (
@@ -15,8 +19,8 @@ function header() {
       </div>
       <div className={style.icons}>
         <SearchIconIcon />
-        <img src="../img/usericon.svg" alt="" />
-        <img src="../img/heart.svg" alt="" />
+        <FontAwesomeIcon icon={faUser} className={style.profileIcon}/>
+        <FontAwesomeIcon icon={faHeart} className={style.likeIcon} />
         <ShopCardIcon />
       </div>
     </div>

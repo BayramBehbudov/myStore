@@ -8,7 +8,8 @@
         cursor: pointer;
         font-size: 27px;
         transition: all 0.3s;
-        color: rgb(91, 82, 73);
+        color: rgb(255, 115, 0);
+
     }
     .shopCardIcon:hover {
         transform: scale(1.1);
@@ -18,7 +19,7 @@
         left: 37px;
         top: -13px;
         font-weight: bold;
-        color: rgb(8, 8, 8);
+        color: rgb(255, 115, 0);
     }
 }
 
