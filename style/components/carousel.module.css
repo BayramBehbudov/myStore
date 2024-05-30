@@ -1,0 +1,114 @@
+.carouselContainer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselItems {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.chevron {
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.chevron:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.carousel {
+    border: 1px solid red;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    overflow: hidden;
+
+}
+
+
+.carouselItem {
+    width: 30%;
+    height: 95%;
+    position: relative;
+    display: none;
+    flex-shrink: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+/* .carouselItem {
+    width: 100%;
+    height: 100%;
+} */
+
+
+.carouselItem.isVisible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.description {
+    width: 80%;
+    padding: 20px 0;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+
+}
+
+.title {
+    font-weight: bold;
+}
+
+.desc {}
+
+
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

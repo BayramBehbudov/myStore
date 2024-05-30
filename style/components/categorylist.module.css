@@ -14,7 +14,9 @@
         max-height: fit-content;
         border: none;
 
-        background-color: #f506e1;
+
+        background-color: rgb(255, 133, 5);
+
     }
 
     .leftCategoryList {
@@ -42,13 +44,10 @@
         }
     }
 
-    button:hover {
-        background-color: #f6a0e6;
-
-    }
-
+    button:hover,
     .activeBtn {
-        background-color: #f6a0e6;
+        background-color: rgb(244, 100, 50);
 
     }
+
 }

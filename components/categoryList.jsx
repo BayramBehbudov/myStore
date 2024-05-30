@@ -9,7 +9,6 @@ AllProductsData.forEach((data) => {
     allCategory.push(data.category);
   }
 });
-
 function category() {
   const { setCategory, selectedCategory } = useSelectedCategory();
   return (

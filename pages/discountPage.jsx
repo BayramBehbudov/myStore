@@ -2,7 +2,6 @@ import { AllProductsData } from "../allProducts";
 import ProductsCard from "../components/productCard";
 import style from "../style/pages/discountPage.module.css";
 
-
 function discountPage() {
   return (
     <div className={style.discountContainer}>

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../style/components/buttonForHome.module.css";
+import style from "../style/components/btnWithStars.module.css";
 import changePage from "../changedElement.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

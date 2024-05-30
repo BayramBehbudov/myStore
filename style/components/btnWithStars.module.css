@@ -90,9 +90,11 @@
   color: #181818;
   gap: 15px;
 }
+
 .btnIcon {
   transition: all 0.5s;
 }
+
 .button:hover .btnIcon {
   font-size: 20px;
 }

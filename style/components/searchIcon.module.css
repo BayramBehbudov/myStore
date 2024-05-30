@@ -24,7 +24,7 @@
         position: absolute;
         top: calc(100% + 10px);
         left: 0;
-        width: 100%;
+        width: 150%;
         background-color: white;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -33,6 +33,8 @@
 
         max-height: 200px;
         overflow: auto;
+        border-radius: 20px;
+
     }
 
     .modal ul {
