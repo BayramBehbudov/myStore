@@ -1,7 +1,14 @@
+import style from "../style/pages/home.module.css";
+import Button from "../components/buttonForHome.jsx";
 function home() {
   return (
-    <div>
-      home sehifesi
+    <div className={style.homeCotainer}>
+      <div className={style.homeTop}>
+        <div className={style.topContainer}>
+          <h1 className={style.topTitle}>Find Your Fashion</h1>
+          <Button />
+        </div>
+      </div>
     </div>
   );
 }
