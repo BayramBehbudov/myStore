@@ -9,6 +9,7 @@ function st({ stars }) {
     if (i < Math.floor(stars)) {
       arr.push(
         <FontAwesomeIcon
+          key={`star${i}`}
           icon={faStar}
           className={`${style.active} ${style.starItem}`}
         />
@@ -16,12 +17,19 @@ function st({ stars }) {
     } else if (i == Math.floor(stars) && stars - Math.floor(stars) != 0) {
       arr.push(
         <FontAwesomeIcon
+          key={`star${i}`}
           icon={faStarHalfStroke}
           className={`${style.active} ${style.starItem}`}
         />
       );
     } else {
-      arr.push(<FontAwesomeIcon icon={faStar} className={style.starItem} />);
+      arr.push(
+        <FontAwesomeIcon
+          key={`star${i}`}
+          icon={faStar}
+          className={style.starItem}
+        />
+      );
     }
   }
   return <div className={style.stars}>{arr.map((star) => star)}</div>;

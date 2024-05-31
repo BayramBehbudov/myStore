@@ -5,10 +5,11 @@ import ShopCardIcon from "../components/shopcardIcon.jsx";
 import SearchIconIcon from "../components/searchIcon.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
-
-
+import changePage from "../changedElement.js";
 
 function header() {
+  const { setPageName } = changePage();
+
   return (
     <div className={style.header}>
       <div className={style.storeName}>
@@ -19,8 +20,14 @@ function header() {
       </div>
       <div className={style.icons}>
         <SearchIconIcon />
-        <FontAwesomeIcon icon={faUser} className={style.profileIcon}/>
-        <FontAwesomeIcon icon={faHeart} className={style.likeIcon} />
+        
+        <FontAwesomeIcon icon={faUser} className={style.profileIcon} />
+        
+        <FontAwesomeIcon
+          icon={faHeart}
+          className={style.likeIcon}
+          onClick={() => setPageName("likedProdPage")}
+        />
         <ShopCardIcon />
       </div>
     </div>

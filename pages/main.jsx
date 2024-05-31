@@ -5,6 +5,7 @@ import DiscountPage from "./discountPage.jsx";
 import Home from "./home";
 import ProductDetail from "./productDetail.jsx";
 import ShopCardPage from "./shopCardPage.jsx";
+import LikedProdPage from "./likedProdPage.jsx";
 
 import useChangedPage from "../changedElement.js";
 
@@ -17,7 +18,8 @@ const pages = {
   home: <Home />,
   discountPage: <DiscountPage />,
   detailPage: <ProductDetail />,
-  shopCardPage: <ShopCardPage/>
+  shopCardPage: <ShopCardPage/>,
+  likedProdPage: <LikedProdPage/>,
 };
 
 function main() {

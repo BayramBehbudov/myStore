@@ -3,6 +3,8 @@ import style from "../style/components/productDetails.module.css";
 import ReviewsPage from "../components/reviews.jsx";
 import React, { useState } from "react";
 import Stars from "../components/star.jsx";
+import LikeIcon from "../components/likeIcon.jsx";
+
 function productDetail() {
   const { selectedProduct, shopCardItems } = setSelectedElement();
 
@@ -52,7 +54,10 @@ function productDetail() {
   return (
     <div className={style.prodContainer}>
       <div className={style.leftSect}>
-        <img src={image} alt="" />
+        <div className={style.imgContainer}>
+          <img src={image} alt="" />
+          <LikeIcon prod={selectedProduct} />
+        </div>
       </div>
       <div className={style.rightSect}>
         <div className={style.rightCont}>

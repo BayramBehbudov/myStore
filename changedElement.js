@@ -6,6 +6,7 @@ const useChangedElement = create(set => ({
     selectedProduct: {},
     allReviews: [],
     shopCardItems: [],
+    likedProducts: [],
 
     setReview: review => set(state => ({ allReviews: (state.allReviews = review) })),
 
