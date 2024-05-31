@@ -48,12 +48,24 @@
     }
 
     .likeIcon {
-        font-size: 27px;
         color: red;
     }
-    .profileIcon{
-        font-size: 27px;
+
+    .profileIcon {
         color: rgb(91, 82, 82);
+
+    }
+
+    .likeIcon,
+    .profileIcon {
+        font-size: 27px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .likeIcon:hover,
+    .profileIcon:hover {
+        transform: scale(1.1);
     }
 
 }
