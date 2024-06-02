@@ -22,21 +22,22 @@ const getDataDummyjson = async () => {
 
 const dataDummyjson = (await getDataDummyjson()).products;
 dataDummyjson.forEach((productsData) => {
-  productsDataes.push({
-    category: productsData.category,
-    image: productsData.images[0],
-    title: productsData.title,
-    price: productsData.price,
-    sku: generateUniqueKey(),
-    reviews: productsData.reviews,
-    brand: productsData.brand ? productsData.brand : "Example Brand",
-    discountPercentage: productsData.discountPercentage,
-    returnPolicy: productsData.returnPolicy,
-    warrantyInformation: productsData.warrantyInformation,
-    description: productsData.description,
-    tags: productsData.tags,
-    rating: productsData.rating,
-  });
+  productsData.category != "groceries" &&
+    productsDataes.push({
+      category: productsData.category,
+      image: productsData.images[0],
+      title: productsData.title,
+      price: productsData.price,
+      sku: generateUniqueKey(),
+      reviews: productsData.reviews,
+      brand: productsData.brand ? productsData.brand : "Example Brand",
+      discountPercentage: productsData.discountPercentage,
+      returnPolicy: productsData.returnPolicy,
+      warrantyInformation: productsData.warrantyInformation,
+      description: productsData.description,
+      tags: productsData.tags,
+      rating: productsData.rating,
+    });
 });
 
 const getDataFakestoreapi = async () => {
