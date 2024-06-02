@@ -18,6 +18,21 @@ const UseChangedElement = create(set => ({
     setCategory: category => set(state => ({ selectedCategory: (state.selectedCategory = category) })),
 
     setPageName: name => set(state => ({ pageName: (state.pageName = name) })),
+
+
+    incrementCount: index => set(state => {
+        const updatedItems = [...state.shopCardItems];
+        updatedItems[index].count += 1;
+        return { shopCardItems: updatedItems };
+    }),
+
+    decrementCount: index => set(state => {
+        const updatedItems = [...state.shopCardItems];
+        if (updatedItems[index].count > 1) {
+            updatedItems[index].count -= 1;
+        }
+        return { shopCardItems: updatedItems };
+    })
 }))
 
 export default UseChangedElement

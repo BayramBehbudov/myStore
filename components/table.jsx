@@ -5,8 +5,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/btnWithStars.jsx";
 
 function Table() {
-  const { shopCardItems } = UseChangedElement();
-
+  const { shopCardItems, incrementCount, decrementCount } = UseChangedElement();
   function calculateTotal() {
     let sum = 0;
     shopCardItems.map((product) => {
@@ -62,26 +61,25 @@ function Table() {
               </th>
               <th>
                 <div className={style.counter}>
-                  <button
-                    onClick={() =>
-                      count > 1 ? (shopCardItems[index].count -= 1) : 1
-                    }
-                  >
-                    -
-                  </button>
+                  <button onClick={() => decrementCount(index)}>-</button>
 
                   <p>{count}</p>
 
                   <button
                     onClick={() => {
-                      shopCardItems[index].count += 1;
+                      incrementCount(index);
                     }}
                   >
                     +
                   </button>
                 </div>
               </th>
-              <th>${count * (discountPercentage ? newPrice : price)}</th>
+              <th>
+                $
+                {parseFloat(
+                  count * (discountPercentage ? newPrice : price)
+                ).toFixed(2)}
+              </th>
             </tr>
           );
         })}
