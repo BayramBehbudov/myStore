@@ -1,10 +1,10 @@
-import setSelectedItem from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import ProductItem from "../components/productCard.jsx";
 import style from "../style/components/likeIcon.module.css";
 import Button from "../components/btnWithStars.jsx";
 
-function likedProdPage() {
-  const { likedProducts } = setSelectedItem();
+function LikedProdPage() {
+  const { likedProducts } = UseChangedElement();
 
   if (likedProducts.length == 0) {
     return (
@@ -26,4 +26,4 @@ function likedProdPage() {
   }
 }
 
-export default likedProdPage;
+export default LikedProdPage;

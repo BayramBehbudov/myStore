@@ -7,7 +7,7 @@ import ProductDetail from "./productDetail.jsx";
 import ShopCardPage from "./shopCardPage.jsx";
 import LikedProdPage from "./likedProdPage.jsx";
 
-import useChangedPage from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
 import style from "../style/pages/main.module.css";
 
@@ -22,11 +22,11 @@ const pages = {
   likedProdPage: <LikedProdPage/>,
 };
 
-function main() {
+function Main() {
   window.scrollTo(0, 0);
 
-  const { pageName } = useChangedPage();
+  const { pageName } = UseChangedElement();
   return <div className={style.main}> {pages[pageName]}</div>;
 }
 
-export default main;
+export default Main;

@@ -3,9 +3,9 @@ import Stars from "./star.jsx";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-let data;
 
-function reviews({ reviews }) {
+function Reviews({ reviews }) {
+
   const [reviewerName, setNameInputValue] = useState("");
   const [reviewerEmail, setEmailInputValue] = useState("");
   const [comment, setCommentInputValue] = useState("");
@@ -131,4 +131,4 @@ function reviews({ reviews }) {
   );
 }
 
-export default reviews;
+export default Reviews;

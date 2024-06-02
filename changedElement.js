@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-const useChangedElement = create(set => ({
+const UseChangedElement = create(set => ({
     pageName: "home",
     selectedCategory: "All",
     selectedProduct: {},
@@ -10,7 +10,7 @@ const useChangedElement = create(set => ({
 
     setReview: review => set(state => ({ allReviews: (state.allReviews = review) })),
 
-    setshopCardItems: item => set(state => ({ shopCardItems: (state.shopCardItems = item) })),
+    setshopCardItems: item => set(state => ({ shopCardItems: (state.shopCardItems = [...state.shopCardItems, item]) })),
 
 
     setProduct: product => set(state => ({ selectedProduct: (state.selectedProduct = product) })),
@@ -20,4 +20,4 @@ const useChangedElement = create(set => ({
     setPageName: name => set(state => ({ pageName: (state.pageName = name) })),
 }))
 
-export default useChangedElement
+export default UseChangedElement

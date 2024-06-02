@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import style from "../style/components/carousel.module.css";
-import CarouselItem from "../components/carouselItem.jsx";
+import CarouselItem from "./carouselItem.jsx";
 import { useState } from "react";
 
 const carouselData = [
@@ -31,7 +31,7 @@ const carouselData = [
   },
 ];
 
-function carousel() {
+function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -45,6 +45,7 @@ function carousel() {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
   return (
     <div className={style.carouselContainer}>
       <div className={style.carouselItems}>
@@ -62,6 +63,22 @@ function carousel() {
               isVisible={index === currentIndex}
             />
           ))}
+
+          {/* <CarouselItem
+            key={"data" + { currentIndex }}
+            data={carouselData[currentIndex]}
+            isVisible={currentIndex}
+          />
+          <CarouselItem
+            key={"data" + { currentIndex }}
+            data={carouselData[currentIndex + 1]}
+            isVisible={currentIndex}
+          />
+          <CarouselItem
+            key={"data" + { currentIndex }}
+            data={carouselData[currentIndex + 2]}
+            isVisible={currentIndex}
+          /> */}
         </div>
         <FontAwesomeIcon
           icon={faChevronRight}
@@ -73,4 +90,4 @@ function carousel() {
   );
 }
 
-export default carousel;
+export default Carousel;

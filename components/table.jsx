@@ -1,10 +1,11 @@
 import style from "../style/components/shopCardTable.module.css";
-import ShopCardData from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/btnWithStars.jsx";
-function table() {
-  const { shopCardItems } = ShopCardData();
+
+function Table() {
+  const { shopCardItems } = UseChangedElement();
 
   function calculateTotal() {
     let sum = 0;
@@ -100,4 +101,4 @@ function table() {
   );
 }
 
-export default table;
+export default Table;

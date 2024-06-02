@@ -1,12 +1,12 @@
 import style from "../style/components/shopCard.module.css";
 import Table from "../components/table.jsx";
-import useChangeElement from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 
-function shopCardPage() {
-  const { setPageName } = useChangeElement();
+function ShopCardPage() {
+  const { setPageName } = UseChangedElement();
   return (
     <div className={style.shopCardPageContainer}>
       <h1>Your Shopping Card</h1>
@@ -21,7 +21,7 @@ function shopCardPage() {
           <FontAwesomeIcon
             icon={faArrowLeftLong}
             className={style.arrowLeftIcon}
-          />{" "}
+          />
           Back to shop
         </button>
       </div>
@@ -29,4 +29,4 @@ function shopCardPage() {
   );
 }
 
-export default shopCardPage;
+export default ShopCardPage;

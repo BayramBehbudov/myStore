@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import style from "../style/components/social.module.css";
-function social() {
+function Social() {
   return (
     <div className={style.socialIcons}>
       <a className={style.facebook} target="_blank" rel="noopener noreferrer">
@@ -30,4 +30,4 @@ function social() {
   );
 }
 
-export default social;
+export default Social;

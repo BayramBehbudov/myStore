@@ -1,8 +1,8 @@
 import style from "../style/components/navbar.module.css";
-import changePage from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
-function navbar() {
-  const { setPageName, pageName, setCategory } = changePage();
+function Navbar() {
+  const { setPageName, pageName, setCategory } = UseChangedElement();
 
   return (
     <nav className={style.nav}>
@@ -60,4 +60,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;

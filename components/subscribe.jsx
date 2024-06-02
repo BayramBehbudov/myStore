@@ -1,7 +1,7 @@
 import style from "../style/components/subscribe.module.css";
 import React, { useRef } from "react";
 
-function subscribe() {
+function Subscribe() {
   const handleSubscribe = () => {
     console.log(inputRef.current.value);
   };
@@ -24,4 +24,4 @@ function subscribe() {
   );
 }
 
-export default subscribe;
+export default Subscribe;

@@ -2,7 +2,7 @@ import { AllProductsData } from "../allProducts";
 import ProductsCard from "../components/productCard";
 import style from "../style/pages/discountPage.module.css";
 
-function discountPage() {
+function DiscountPage() {
   return (
     <div className={style.discountContainer}>
       <h1>Grab Your Discounts Now! Save Big on Your Favorite Items!</h1>
@@ -18,4 +18,4 @@ function discountPage() {
   );
 }
 
-export default discountPage;
+export default DiscountPage;

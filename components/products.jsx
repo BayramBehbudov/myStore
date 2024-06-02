@@ -3,7 +3,7 @@ import style from "../style/components/products.module.css";
 import { AllProductsData } from "../allProducts.jsx";
 import setSelectedItem from "../changedElement.js";
 
-function products() {
+function Products() {
   const { selectedCategory } = setSelectedItem();
 
   if (selectedCategory == "All") {
@@ -28,4 +28,4 @@ function products() {
   }
   
 }
-export default products;
+export default Products;

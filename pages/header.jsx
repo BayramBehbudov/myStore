@@ -1,14 +1,14 @@
 import React from "react";
 import style from "../style/pages/header.module.css";
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbar.jsx";
 import ShopCardIcon from "../components/shopcardIcon.jsx";
 import SearchIconIcon from "../components/searchIcon.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
-import changePage from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
-function header() {
-  const { setPageName } = changePage();
+function Header() {
+  const { setPageName } = UseChangedElement();
 
   return (
     <div className={style.header}>
@@ -34,4 +34,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;

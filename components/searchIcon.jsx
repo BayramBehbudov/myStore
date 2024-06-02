@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import style from "../style/components/searchIcon.module.css";
-import useChangeElement from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import { AllProductsData } from "../allProducts.jsx";
 
-function searchIcon() {
+function SearchIcon() {
   const [inputValue, setInputValue] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const { setPageName, setProduct } = useChangeElement();
+  const { setPageName, setProduct } = UseChangedElement();
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -67,4 +67,4 @@ function searchIcon() {
   );
 }
 
-export default searchIcon;
+export default SearchIcon;

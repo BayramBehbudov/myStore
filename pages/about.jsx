@@ -2,7 +2,7 @@ import style from "../style/pages/about.module.css";
 import FAQ from "../components/faq";
 import Subscribe from "../components/subscribe";
 
-function about() {
+function About() {
  
   return (
     <div className={style.aboutContainer}>
@@ -54,4 +54,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

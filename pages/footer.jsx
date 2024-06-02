@@ -1,9 +1,9 @@
 import React from "react";
 import style from "../style/pages/footer.module.css";
-import changePage from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
 const Footer = () => {
-  const { setPageName } = changePage();
+  const { setPageName } = UseChangedElement();
 
   return (
     <footer className={style.footer}>

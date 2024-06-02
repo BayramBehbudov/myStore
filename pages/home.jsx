@@ -1,7 +1,7 @@
 import style from "../style/pages/home.module.css";
 import Button from "../components/btnWithStars.jsx";
 import Carousel from "../components/carousel.jsx";
-import ChangedElement from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTruckFast,
@@ -10,8 +10,8 @@ import {
   faFileShield,
 } from "@fortawesome/free-solid-svg-icons";
 
-function home() {
-  const { setPageName } = ChangedElement();
+function Home() {
+  const { setPageName } = UseChangedElement();
 
   return (
     <div className={style.homeCotainer}>
@@ -82,4 +82,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

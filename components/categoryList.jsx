@@ -1,5 +1,5 @@
 import style from "../style/components/categorylist.module.css";
-import useSelectedCategory from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import { AllProductsData } from "../allProducts.jsx";
 
 const allCategory = [];
@@ -9,8 +9,8 @@ AllProductsData.forEach((data) => {
     allCategory.push(data.category);
   }
 });
-function category() {
-  const { setCategory, selectedCategory } = useSelectedCategory();
+function Category() {
+  const { setCategory, selectedCategory } = UseChangedElement();
   return (
     <div className={style.categoryListCont}>
       <button
@@ -36,4 +36,4 @@ function category() {
   );
 }
 
-export default category;
+export default Category;

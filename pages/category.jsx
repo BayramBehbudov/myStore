@@ -3,7 +3,7 @@ import CategoryList from "../components/categoryList";
 
 import style from "../style/pages/category.module.css"
 
-function category() {
+function Category() {
   return (
     <div className={style.categoryContainer}>
       <CategoryList />
@@ -12,4 +12,4 @@ function category() {
   );
 }
 
-export default category;
+export default Category;

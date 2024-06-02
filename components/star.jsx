@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import style from "../style/components/stars.module.css";
 
-function st({ stars }) {
+function Star({ stars }) {
   let arr = [];
 
   for (let i = 0; i < 5; i++) {
@@ -35,4 +35,4 @@ function st({ stars }) {
   return <div className={style.stars}>{arr.map((star) => star)}</div>;
 }
 
-export default st;
+export default Star;

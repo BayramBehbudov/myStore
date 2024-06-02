@@ -1,12 +1,13 @@
-import setSelectedElement from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import style from "../style/components/productDetails.module.css";
 import ReviewsPage from "../components/reviews.jsx";
 import React, { useState } from "react";
 import Stars from "../components/star.jsx";
 import LikeIcon from "../components/likeIcon.jsx";
 
-function productDetail() {
-  const { selectedProduct, shopCardItems } = setSelectedElement();
+function ProductDetail() {
+  const { selectedProduct, shopCardItems, setshopCardItems } =
+  UseChangedElement();
 
   const [count, setCount] = useState(1);
 
@@ -25,7 +26,7 @@ function productDetail() {
   } = selectedProduct;
 
   function addToCard() {
-    setCount("1");
+    setCount(1);
     const product = {
       title,
       image,
@@ -41,13 +42,13 @@ function productDetail() {
         })
       ) {
         shopCardItems.forEach((prod) => {
-          prod.title === product.title ? (prod.count = product.count) : "";
+          prod.title === product.title && (prod.count = product.count);
         });
       } else {
-        shopCardItems.push(product);
+        setshopCardItems(product);
       }
     } else {
-      shopCardItems.push(product);
+      setshopCardItems(product);
     }
   }
 
@@ -144,10 +145,9 @@ function productDetail() {
         </div>
         <p>Raitings: {rating}</p>
       </div>
-
       <ReviewsPage reviews={reviews} />
     </div>
   );
 }
 
-export default productDetail;
+export default ProductDetail;

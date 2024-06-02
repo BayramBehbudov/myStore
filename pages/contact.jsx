@@ -1,7 +1,7 @@
 import ContactUs from "../components/contactUs.jsx";
 import style from "../style/pages/contact.module.css";
 import Social from "../components/social.jsx";
-function contact() {
+function Contact() {
   return (
     <div className={style.contactPageContainer}>
       <div className={style.contactTopContainer}>
@@ -18,4 +18,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

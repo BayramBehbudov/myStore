@@ -1,12 +1,12 @@
 import React from "react";
 import style from "../style/components/btnWithStars.module.css";
-import changePage from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Button = () => {
-  const { setPageName } = changePage();
+  const { setPageName } = UseChangedElement();
 
   return (
     <button className={style.button} onClick={() => setPageName("category")}>

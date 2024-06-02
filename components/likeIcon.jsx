@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import style from "../style/components/likeIcon.module.css";
-import setSelectedElement from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 
-function likeIcon(prod) {
+function LikeIcon(prod) {
   const [isClicked, setIsClicked] = useState(false);
-  const { likedProducts } = setSelectedElement();
+  const { likedProducts } = UseChangedElement();
 
   if (likedProducts.length != 0 && !isClicked) {
     likedProducts.forEach((product) => {
@@ -36,5 +36,5 @@ function likeIcon(prod) {
   );
 }
 
-export default likeIcon;
+export default LikeIcon;
 

@@ -1,9 +1,9 @@
 import style from "../style/components/products.module.css";
-import setSelectedItem from "../changedElement.js";
+import UseChangedElement from "../changedElement.js";
 import LikeIcon from "./likeIcon.jsx";
 
 const ProductItem = ({ product }) => {
-  const { setPageName, setProduct } = setSelectedItem();
+  const { setPageName, setProduct } = UseChangedElement();
     return (
       <div className={style.card}>
         <div className={style.cardimg}>

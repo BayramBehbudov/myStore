@@ -67,9 +67,9 @@ dataFakestoreapi.forEach((productsData) => {
   });
 });
 
-function allProducts() {
+function AllProducts() {
   return <div></div>;
 }
 
-export default allProducts;
+export default AllProducts;
 export const AllProductsData = productsDataes;
