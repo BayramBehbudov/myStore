@@ -5,7 +5,14 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "../components/btnWithStars.jsx";
 
 function Table() {
-  const { shopCardItems, incrementCount, decrementCount } = UseChangedElement();
+  const {
+    shopCardItems,
+    incrementCount,
+    decrementCount,
+    setProduct,
+    setPageName,
+    deleteProductInShopCard,
+  } = UseChangedElement();
   function calculateTotal() {
     let sum = 0;
     shopCardItems.map((product) => {
@@ -39,7 +46,7 @@ function Table() {
 
           return (
             <tr key={index}>
-              <th onClick={() => shopCardItems.splice(index, 1)}>
+              <th onClick={() => deleteProductInShopCard(index)}>
                 <FontAwesomeIcon
                   icon={faXmark}
                   className={style.deleteProduct}
@@ -48,7 +55,14 @@ function Table() {
               <th>
                 <img src={image} alt="" />
               </th>
-              <th>{title}</th>
+              <th
+                onClick={() => {
+                  setPageName("detailPage"), setProduct(product);
+                }}
+                className={style.prodTitle}
+              >
+                {title}
+              </th>
               <th>
                 {discountPercentage != undefined ? (
                   <div>

@@ -8,7 +8,6 @@ import LikeIcon from "../components/likeIcon.jsx";
 function ProductDetail() {
   const { selectedProduct, shopCardItems, setshopCardItems } =
     UseChangedElement();
-
   const [count, setCount] = useState(1);
 
   const {
@@ -23,16 +22,25 @@ function ProductDetail() {
     tags,
     reviews,
     rating,
+    sku,
   } = selectedProduct;
 
   function addToCard() {
     setCount(1);
     const product = {
+      count,
       title,
       image,
-      price,
-      count,
+      brand,
       discountPercentage,
+      price,
+      returnPolicy,
+      warrantyInformation,
+      description,
+      tags,
+      reviews,
+      rating,
+      sku,
     };
 
     if (shopCardItems.length != 0) {
@@ -71,7 +79,6 @@ function ProductDetail() {
 
           {discountPercentage && (
             <div>
-              {" "}
               <p>Discount:</p>
               <span>{discountPercentage}%</span>
             </div>

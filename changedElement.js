@@ -19,6 +19,11 @@ const UseChangedElement = create(set => ({
     setPageName: name => set(state => ({ pageName: (state.pageName = name) })),
 
 
+    deleteProductInShopCard: index => set(state => {
+        const updatedItems = [...state.shopCardItems];
+        updatedItems.splice(index, 1)
+        return { shopCardItems: updatedItems };
+    }),
     incrementCount: index => set(state => {
         const updatedItems = [...state.shopCardItems];
         updatedItems[index].count += 1;
