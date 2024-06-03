@@ -100,13 +100,22 @@
 
     .reviews {
         width: 80%;
-        height: fit-content;
+        max-height: 400px;
         padding: 10px;
 
         display: flex;
         flex-direction: column;
         gap: 10px;
 
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(146, 237, 134);
+        }
 
         .reviewItem {
             padding: 10px;

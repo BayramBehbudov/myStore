@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Reviews({ reviews }) {
-
   const [reviewerName, setNameInputValue] = useState("");
   const [reviewerEmail, setEmailInputValue] = useState("");
   const [comment, setCommentInputValue] = useState("");
   const [rating, setRate] = useState();
+
+
 
   function reviewSetBtn() {
     const date = new Date().toISOString();

@@ -7,7 +7,7 @@ import LikeIcon from "../components/likeIcon.jsx";
 
 function ProductDetail() {
   const { selectedProduct, shopCardItems, setshopCardItems } =
-  UseChangedElement();
+    UseChangedElement();
 
   const [count, setCount] = useState(1);
 
@@ -145,7 +145,7 @@ function ProductDetail() {
         </div>
         <p>Raitings: {rating}</p>
       </div>
-      <ReviewsPage reviews={reviews} />
+      <ReviewsPage reviews={reviews ? reviews : []} />
     </div>
   );
 }
